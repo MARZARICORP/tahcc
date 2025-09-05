@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <h1>Chat Simples</h1>
+            <div class="user-selector">
+                <label for="activeUser" class="form-label">Usuário Ativo:</label>
+                <select id="activeUser" class="form-control user-select">
+                    <option value="1">Usuário 1</option>
+                    <option value="2">Usuário 2</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Messages Area -->
+        <main class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <p>Bem-vindo ao Chat Simples! Selecione seu usuário e comece a conversar.</p>
+                <p class="text-secondary">As mensagens não são salvas e desaparecem ao recarregar a página.</p>
+            </div>
+        </main>
+
+        <!-- Message Input -->
+        <footer class="chat-input-area">
+            <div class="chat-input">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        class="form-control message-field" 
+                        placeholder="Digite sua mensagem..."
+                        maxlength="500"
+                        autocomplete="off"
+                    >
+                    <button id="sendButton" class="btn btn--primary send-btn">
+                        Enviar
+                    </button>
+                </div>
+                <div class="char-counter">
+                    <span id="charCount">0</span>/500 caracteres
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    </div> <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="firebase-config.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
